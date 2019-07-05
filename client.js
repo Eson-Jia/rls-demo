@@ -19,5 +19,6 @@ client.on('secureConnect', () => {
         console.log('server ends connections');
         client.destroy();
     })
+    .on('close', () => console.log(`${new Date().toISOString()}`))
     .setEncoding('utf-8');
 
